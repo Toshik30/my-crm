@@ -1,0 +1,57 @@
+@import './variables.scss';
+.sign-page {
+    height: calc(100vh - 64px);
+    margin: 32px 22px;
+}
+.sign_ctn {
+    border-radius: $border-r-secondary;
+    box-shadow: $shadow-primary ;
+    display: flex;
+    .block_bg {
+        width: 46%;
+        background: $black-dark-blue url(../img/bg-signIn.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-top-left-radius: $border-r-primary;
+        border-bottom-left-radius: $border-r-primary;
+    }
+    .block {
+        flex: 1;
+    }
+    .logo-wrapper {
+        margin: 128px 0px 84px;
+    }
+    .button-wrapper {
+        margin-top: 42px;
+    }
+}
+
+.sign-form-wrapper {
+    width: 100%;
+    max-width: 486px;
+    padding: 0px 12px;
+    margin: 0 auto;
+    .sub-heading {
+        margin-bottom: 20px;
+    }
+
+    .button-wrapper {
+        .btn {
+            width: 100%;
+            max-width: 202px;
+            text-align: center;
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 12px;
+                background: url(../img/arrow.svg);
+                background-repeat: no-repeat;
+                background-position:  center;
+                background-size: contain;
+                margin-left: 8px;
+            }
+        }
+    }
+}
