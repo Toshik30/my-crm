@@ -137,6 +137,7 @@ input, a, button {
 }
 .input-block {
     margin-bottom: 20px;
+    position: relative;
     .label {
        font-size: $primary-fz;
        line-height: 24px;

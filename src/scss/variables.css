@@ -76,7 +76,8 @@ input, a, button {
     outline: none; }
 
 .input-block {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  position: relative; }
   .input-block .label {
     font-size: 14px;
     line-height: 24px;

@@ -54,4 +54,9 @@
             }
         }
     }
+    .error_message {
+        position: absolute;
+        right: 0;
+        color: $shine-orangered;
+    }
 }
