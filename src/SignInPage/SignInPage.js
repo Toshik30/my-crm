@@ -26,7 +26,7 @@ const SignInPage = () => {
                                     <label htmlFor="" className="label">
                                         <input type="checkbox" id="check" className="checkbox"  />
                                         <label htmlFor="check"></label>
-                                        Remember me
+                                        Remember me !
                                     </label>
                                     <a href="" className="helping-link">Forgot Password?</a>
                                 </div>
