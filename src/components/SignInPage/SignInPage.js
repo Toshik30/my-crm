@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../img/logo.svg';
+import logo from '../../assets/img/logo.svg';
+// import  Route from 'react-router';
+
+
 
 const SignInPage = () => {
     const [email, setEmail] = useState('');
@@ -17,24 +20,14 @@ const SignInPage = () => {
             setFormValid(true)
         }
     }, [emailError, passwordError]);
-    const blurHandler = (e) => {
-        switch (e.target.name) {
-            case 'email':
-                setEmailDirty(true);
-                break
 
-            case 'password':
-                setPasswordDirty(true);
-                break
-        }
-    }
     const emailHandler = (e) => {
         setEmail(e.target.value);
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if(!re.test(String(e.target.value).toLowerCase())) {
             setEmailError('try again');
         } else {
-            setEmailError(' ');
+            setEmailError('');
         }
     }
     const passwordHandler = (e) => {
@@ -48,6 +41,19 @@ const SignInPage = () => {
             setPasswordError('')
         }
     }
+    const blurHandler = (e) => {
+        switch (e.target.name) {
+            case 'email':
+                console.log('leave email')
+                setEmailDirty(true);
+                break;
+
+            case 'password':
+                setPasswordDirty(true);
+                break;
+        }
+    }
+    
     return(
         <section className="sign-page">
             <div className="container h-100">
@@ -55,20 +61,20 @@ const SignInPage = () => {
                     <div className="block_bg"></div>
                     <div className="block">
                         <div className="logo-wrapper text-center">
-                            <img src={logo} alt="logo"  />
+                            <img src={logo} alt="logo"  /> 
                         </div>
                         <div className="sign-form-wrapper">
-                            <h3 className="sub-heading text-center">Sign in</h3>
+                            <h3 className="sub-heading text-center">Sign in to</h3>
                             <form action="" className="sign-in-form">
                                 <div className="input-block">
                                     {(emailDirty && emailError) && <div className="error_message"> {emailError}</div>}
                                     <label htmlFor="" className="label">Email Address</label>
-                                    <input onChange={e => emailHandler(e)} value={email} type="email" onBlur={e => blurHandler(e)} name="email" className="input" placeholder="memberemail@gmail.com" />
+                                    <input onChange={e => emailHandler(e)} value={email} type="email" onBlur={e => blurHandler(e)} name="email" className="input" placeholder="@gmail.com" />
                                 </div>
                                 <div className="input-block password">
                                     {(passwordDirty && passwordError) && <div  className="error_message"> {passwordError}</div>}
                                     <label htmlFor="" className="label">Password</label>
-                                    <input onChange={e => passwordHandler(e)} value={password} type="password" onBlur={e => blurHandler(e)} name="password" className="input" placeholder="********" />
+                                    <input onChange={e => passwordHandler(e)} value={password} type="password" onBlur={e => blurHandler(e)} name="password" className="input"  />
                                 </div>
                                 <div className="checkbox-wrapper">
                                     <label htmlFor="" className="label">
@@ -76,10 +82,9 @@ const SignInPage = () => {
                                         <label htmlFor="check"></label>
                                         Remember me
                                     </label>
-                                  
                                 </div>
                                 <div className="button-wrapper">
-                                    <button  type="submit" disabled={!formValid} className="btn primary">Sign In</button>
+                                    <button   type="submit" disabled={!formValid} className="btn primary">Sign In</button>
                                 </div>
                             </form>
                         </div>
