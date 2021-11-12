@@ -8,6 +8,7 @@
     border-radius: $border-r-secondary;
     box-shadow: $shadow-primary ;
     display: flex;
+    height: calc(100vh - 64px);
     .block_bg {
         width: 46%;
         background: $black-dark-blue url(../img/bg-signIn.svg);
@@ -26,17 +27,6 @@
     .button-wrapper {
         margin-top: 42px;
     }
-}
-
-.sign-form-wrapper {
-    width: 100%;
-    max-width: 486px;
-    padding: 0px 12px;
-    margin: 0 auto;
-    .sub-heading {
-        margin-bottom: 20px;
-    }
-
     .button-wrapper {
         .btn {
             width: 100%;
@@ -55,9 +45,81 @@
             }
         }
     }
+}
+
+.sign-form-wrapper {
+    width: 100%;
+    max-width: 486px;
+    padding: 0px 12px;
+    margin: 0 auto;
+    .sub-heading {
+        margin-bottom: 20px;
+    }
     .error_message {
         position: absolute;
         right: 0;
         color: $shine-orangered;
+    }
+}
+.get-started {
+    background: $black-dark-blue url(../img/bg-stepone.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    height: 100%;
+    display: flex;
+    border-top-left-radius: $border-r-primary;
+    border-bottom-left-radius: $border-r-primary;
+
+    &_ctn {
+        padding: 162px 30px 0px 47px;
+    }
+    .big-tittle {
+        margin-bottom: 40px;
+    }
+    .checkout-validation {
+        &_item {
+            color: $semi-white;
+            opacity: .5;
+            display: flex;
+            align-items: center;
+            font-size: $secondary-fz;
+            line-height: 26px;
+            font-weight: 500;
+        }
+        .connect-state-line {
+            display: block;
+            height: 26px;
+            width: 2px;
+            background: $white;
+            margin: 8px 0px 12px 12px;
+        }
+    }   
+    .state-round {
+        width: 26px;
+        height: 26px;
+        border-radius: $border-r-round;
+        border: 2px solid $semi-white;
+        margin-right: 12px;
+    }
+}
+.step-wrapper {
+    padding: 70px 0px;
+    border-bottom: 1px solid $semi-white;
+    .step-count {
+        margin-bottom: 70px;
+    }
+}
+.information-about-code {
+    padding: 20px 22px;
+    display: flex;
+    align-items: flex-start;
+    background: $light-blue;
+    border-radius: $border-r-primary;
+    margin-bottom: 20px;
+
+    .attention-blue-icon {
+        margin-right: 12px;
+        margin-top: 3px;
     }
 }

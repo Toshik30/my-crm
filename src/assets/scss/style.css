@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: "Montserrat-Regular", sans-serif; }
 
+.flex {
+  display: flex; }
+
 .container {
   width: 100%;
   max-width: 1380px;
@@ -18,6 +21,9 @@
     padding: 20px;
     width: 100%;
     margin: 0 auto; }
+  .container__sml {
+    max-width: 356px;
+    width: 100%; }
   .container__sm {
     max-width: 337px;
     padding: 20px;
@@ -36,6 +42,29 @@ a {
 
 .h-100 {
   height: 100%; }
+
+.text-white {
+  color: #FFFFFF; }
+
+.blue-context {
+  color: #0096C7;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 400; }
+
+.step-count {
+  color: #0096C7;
+  font-weight: 600;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.big-tittle {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 500; }
 
 .btn {
   border-radius: 12px;
@@ -138,6 +167,9 @@ input[type=checkbox]:checked + label:before {
   justify-content: center;
   align-items: center;
   margin-top: 20px; }
+  .button-wrapper.flex-end {
+    justify-content: flex-end;
+    margin: 50px 50px 50px 0px; }
 
 .helping-link {
   color: inherit; }
@@ -152,13 +184,28 @@ input[type=checkbox]:checked + label:before {
   border-radius: 12px;
   background: #FFFFFF;
   border: 1px solid #f5f5f5;
-  padding: 18px 12px;
+  padding: 16px 12px;
   line-height: 22px;
   font-size: 14px;
   color: #7D8592;
   width: 100%; }
   .input::placeholder {
     color: #7D8592; }
+  .input.sms-code {
+    max-width: 58px;
+    text-align: center;
+    margin-right: 20px; }
+
+.select {
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #f5f5f5;
+  padding: 18px 12px;
+  line-height: 22px;
+  font-size: 14px;
+  color: #7D8592;
+  margin-right: 15px;
+  outline: none; }
 
 .text-center {
   text-align: center; }
@@ -170,7 +217,8 @@ input[type=checkbox]:checked + label:before {
 .sign_ctn {
   border-radius: 12px;
   box-shadow: 0px 0px 8px rgba(24, 57, 88, 0.1);
-  display: flex; }
+  display: flex;
+  height: calc(100vh - 64px); }
   .sign_ctn .block_bg {
     width: 46%;
     background: #090E29 url(../img/bg-signIn.svg);
@@ -185,19 +233,11 @@ input[type=checkbox]:checked + label:before {
     margin: 128px 0px 84px; }
   .sign_ctn .button-wrapper {
     margin-top: 42px; }
-
-.sign-form-wrapper {
-  width: 100%;
-  max-width: 486px;
-  padding: 0px 12px;
-  margin: 0 auto; }
-  .sign-form-wrapper .sub-heading {
-    margin-bottom: 20px; }
-  .sign-form-wrapper .button-wrapper .btn {
+  .sign_ctn .button-wrapper .btn {
     width: 100%;
     max-width: 202px;
     text-align: center; }
-    .sign-form-wrapper .button-wrapper .btn:after {
+    .sign_ctn .button-wrapper .btn:after {
       content: '';
       display: inline-block;
       width: 16px;
@@ -207,7 +247,66 @@ input[type=checkbox]:checked + label:before {
       background-position: center;
       background-size: contain;
       margin-left: 8px; }
+
+.sign-form-wrapper {
+  width: 100%;
+  max-width: 486px;
+  padding: 0px 12px;
+  margin: 0 auto; }
+  .sign-form-wrapper .sub-heading {
+    margin-bottom: 20px; }
   .sign-form-wrapper .error_message {
     position: absolute;
     right: 0;
     color: #DD4425; }
+
+.get-started {
+  background: #090E29 url(../img/bg-stepone.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  height: 100%;
+  display: flex;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px; }
+  .get-started_ctn {
+    padding: 162px 30px 0px 47px; }
+  .get-started .big-tittle {
+    margin-bottom: 40px; }
+  .get-started .checkout-validation_item {
+    color: #f5f5f5;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500; }
+  .get-started .checkout-validation .connect-state-line {
+    display: block;
+    height: 26px;
+    width: 2px;
+    background: #FFFFFF;
+    margin: 8px 0px 12px 12px; }
+  .get-started .state-round {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #f5f5f5;
+    margin-right: 12px; }
+
+.step-wrapper {
+  padding: 70px 0px;
+  border-bottom: 1px solid #f5f5f5; }
+  .step-wrapper .step-count {
+    margin-bottom: 70px; }
+
+.information-about-code {
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  background: #F4F9FD;
+  border-radius: 14px;
+  margin-bottom: 20px; }
+  .information-about-code .attention-blue-icon {
+    margin-right: 12px;
+    margin-top: 3px; }

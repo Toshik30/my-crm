@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createBrowserHistory } from 'history';
 import logo from '../../assets/img/logo.svg';
 // import  Route from 'react-router';
 
@@ -53,7 +54,13 @@ const SignInPage = () => {
                 break;
         }
     }
-    
+
+
+    const handleClickBtn = () => {
+        let history = createBrowserHistory();
+        history.push('/stepOne')
+    }
+     
     return(
         <section className="sign-page">
             <div className="container h-100">
@@ -84,7 +91,7 @@ const SignInPage = () => {
                                     </label>
                                 </div>
                                 <div className="button-wrapper">
-                                    <button   type="submit" disabled={!formValid} className="btn primary">Sign In</button>
+                                    <button  onClick={handleClickBtn} disabled={!formValid} className="btn primary">Sign In</button>
                                 </div>
                             </form>
                         </div>
