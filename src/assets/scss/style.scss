@@ -8,6 +8,7 @@
     border-radius: $border-r-secondary;
     box-shadow: $shadow-primary ;
     display: flex;
+    position: relative;
     height: calc(100vh - 64px);
     .block_bg {
         width: 46%;
@@ -29,8 +30,8 @@
     }
     .button-wrapper {
         .btn {
-            width: 100%;
-            max-width: 202px;
+           
+            width: 202px;
             text-align: center;
             &:after {
                 content: '';
@@ -60,6 +61,15 @@
         right: 0;
         color: $shine-orangered;
     }
+    .btn_previous {
+        &:before {
+            background: url(../img/add-cross-blue.svg) center no-repeat;
+            background-size: contain;
+            margin-right: 10px;
+            height: 14px;
+            width: 14px;
+        }
+    }
 }
 .get-started {
     background: $black-dark-blue url(../img/bg-stepone.png);
@@ -86,7 +96,11 @@
             font-size: $secondary-fz;
             line-height: 26px;
             font-weight: 500;
+            &.active {
+                opacity: 1;
+            }
         }
+        
         .connect-state-line {
             display: block;
             height: 26px;
@@ -101,6 +115,9 @@
         border-radius: $border-r-round;
         border: 2px solid $semi-white;
         margin-right: 12px;
+        &.active {
+            background: rgba(255, 255, 255, 0.303649);
+        }
     }
 }
 .step-wrapper {
@@ -121,5 +138,71 @@
     .attention-blue-icon {
         margin-right: 12px;
         margin-top: 3px;
+    }
+}
+.check-box-custom {
+    display:none;
+    &+label span {
+        display:inline-block;
+        width:20px;
+        height:20px;
+        margin:-1px 6px 0 0;
+        vertical-align:middle;
+        border-radius: $border-r-round;
+        border: 2px solid $blue;
+        cursor:pointer;
+    }
+    &:checked+label span {
+        background: url(../img/radio.svg) center no-repeat;
+        
+    }
+}
+label[for="yesAnswer"] {
+    margin-right: 20px;
+}
+.check-box-custom + label  {
+    font-size: $secondary-fz;
+}
+.button-block {
+    &_sign-in {
+        width: 100%;
+        margin: 0px 50px ;
+
+    }
+}
+.teams-wrapper {
+    @extend %flex-between;
+    flex-wrap: wrap;
+    .check-box-team {
+        width: 0;
+        height: 0;
+       
+        &:before {
+            content: '';
+            transition: .4s;
+        }
+        &:checked:before {
+            content: '';
+            box-shadow:  0px 0px 13px 0px #6db8ebc2;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            border-radius: $border-r-secondary;
+        }
+    }
+    .label-team {
+        font-size: $primary-fz;
+        color: $black-light;
+        border-radius: $border-r-secondary;
+        border: 1px solid $semi-white;
+        background: $white;
+        padding: 12px;
+        max-width: 101px;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0px;
+        position: relative;        
     }
 }

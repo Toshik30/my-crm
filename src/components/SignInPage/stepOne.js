@@ -1,5 +1,9 @@
-import infoImg from '../../assets/img/info.svg'
-export default function stepOne() {
+import infoImg from '../../assets/img/info.svg';
+import {verificationPhone} from './verificationPhone.js';
+import {Link} from 'react-router-dom';
+
+const stepOne = () => {
+ 
     return (
       <section className="sign-page">
         <div className="container">
@@ -9,8 +13,8 @@ export default function stepOne() {
                 <div className="get-started_ctn">
                   <h2 className="big-tittle text-white">Get started</h2>
                   <div className="checkout-validation">
-                      <div className="checkout-validation_item">
-                        <span className="state-round"></span>
+                      <div className="checkout-validation_item  active">
+                        <span className="state-round  active"></span>
                         <span className="description-step">Valid your phone</span>
                       </div>
                       <span className="connect-state-line"></span>
@@ -48,7 +52,7 @@ export default function stepOne() {
                           <option value="">+7</option>
                           <option value="">+8</option>
                         </select>
-                        <input type="phone"  name="phone" className="input" />
+                        <input type="phone" onChange={(e) => verificationPhone(e)}  name="phone" className="input" />
                       </div>
                     </div>
                     <div className="input-block">
@@ -76,11 +80,12 @@ export default function stepOne() {
                 </div>
               </div>
               <div className="button-wrapper flex-end">
-                  <button className="btn primary">Next Step</button>
-                </div>
+                    <Link to="/stepTwo"><button  className="btn primary">Next Step</button></Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
     );
   }
+  export default stepOne

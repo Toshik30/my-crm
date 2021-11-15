@@ -42,6 +42,16 @@ $shadow-primary: 0px 0px 8px rgba(24, 57, 88, 0.1);
 //var line-height
 $lh-primary: 22px;
 $lh-secondary: 19.5px;
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 * {
     margin: 0;
@@ -52,7 +62,35 @@ $lh-secondary: 19.5px;
 .flex {
     display: flex;
 }
-
+.d-block {
+    display: block;
+}
+.m-auto {
+    margin: 0px auto;
+}
+.mt-25 {
+    margin-top: 25px;
+}
+.mb-25 {
+    margin-bottom: 25px;
+}
+li, a, button, input, select, option {
+    cursor: pointer;
+    background: inherit
+}
+.flex-between {
+    @extend %flex-between;
+}
+.relative {
+    position: relative;
+}
+.bold-grey-text {
+    font-size: $primary-fz;
+    color: $grey-dark;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: "Montserrat-Medium", sans-serif;
+}
 .container {
     width: 100%;
     max-width: 1380px;
@@ -84,6 +122,9 @@ a {
     text-decoration: none;
     color: initial;
 }
+.w-100 {
+    width: 100%;
+}
 .border {
     &_blue {
         border: 1px solid $blue;
@@ -104,6 +145,18 @@ a {
     font-size: $primary-fz;
     font-weight: 400;
 }
+.grey-context {
+    color: $grey-dark;
+    line-height: 19.5px;
+    font-size: $secondary-fz;
+}
+.blue-context-medium {
+    color: $blue;
+    line-height: 19.5px;
+    font-size: $primary-fz;
+    font-weight: 500;
+    font-family: "Montserrat-Medium", sans-serif;
+}
 .step-count {
     color: $blue;
     font-weight: 600;
@@ -123,7 +176,7 @@ a {
     color: $white;
     
     &.primary {
-        padding: 20px;
+        padding: 15px;
         font-size: $primary-fz;
         background: $black-dark-blue;
         line-height: 17px ;
@@ -160,6 +213,22 @@ a {
         border-radius: $border-r-primary;
         padding: 10px;
     }
+    &_previous {
+        font-size: $secondary-fz;
+        line-height: 19.5px;
+        font-family: "Montserrat-Medium", sans-serif;
+        font-weight: 500;
+        color: $blue;
+        background: transparent;
+        &:before {
+            content: '';
+            background: url(../img/arrow-back-blue.svg) center no-repeat;
+            width: 16px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 12px;
+        }
+    }
 }
 input, a, button {
     outline: none;
@@ -183,8 +252,7 @@ input, a, button {
     &.password {
         position: relative;
        
-        &:after {
-            content: '';
+        .open-password {
             position: absolute;
             background: url(../img/view.svg);
             background-repeat: no-repeat;
@@ -236,7 +304,12 @@ input[type=checkbox]:checked + label:before {
     &.flex-end {
         justify-content: flex-end;
         margin: 50px 50px 50px 0px;
-    } 
+    }
+    &.custom-sign-in {
+        position: absolute;
+        width: 100%;
+        bottom: 50px ;
+    }
 }
 .helping-link {
     color: inherit;

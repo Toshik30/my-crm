@@ -1,4 +1,9 @@
 @import url(./fonts.css);
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +12,32 @@
 
 .flex {
   display: flex; }
+
+.d-block {
+  display: block; }
+
+.m-auto {
+  margin: 0px auto; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+li, a, button, input, select, option {
+  cursor: pointer;
+  background: inherit; }
+
+.relative {
+  position: relative; }
+
+.bold-grey-text {
+  font-size: 14px;
+  color: #7D8592;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "Montserrat-Medium", sans-serif; }
 
 .container {
   width: 100%;
@@ -34,6 +65,9 @@ a {
   text-decoration: none;
   color: initial; }
 
+.w-100 {
+  width: 100%; }
+
 .border_blue {
   border: 1px solid #0096C7; }
 
@@ -51,6 +85,18 @@ a {
   line-height: 22px;
   font-size: 14px;
   font-weight: 400; }
+
+.grey-context {
+  color: #7D8592;
+  line-height: 19.5px;
+  font-size: 16px; }
+
+.blue-context-medium {
+  color: #0096C7;
+  line-height: 19.5px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat-Medium", sans-serif; }
 
 .step-count {
   color: #0096C7;
@@ -70,7 +116,7 @@ a {
   border-radius: 12px;
   color: #FFFFFF; }
   .btn.primary {
-    padding: 20px;
+    padding: 15px;
     font-size: 14px;
     background: #090E29;
     line-height: 17px;
@@ -99,6 +145,20 @@ a {
     background: #F4F9FD;
     border-radius: 14px;
     padding: 10px; }
+  .btn_previous {
+    font-size: 16px;
+    line-height: 19.5px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-weight: 500;
+    color: #0096C7;
+    background: transparent; }
+    .btn_previous:before {
+      content: '';
+      background: url(../img/arrow-back-blue.svg) center no-repeat;
+      width: 16px;
+      height: 12px;
+      display: inline-block;
+      margin-right: 12px; }
 
 input, a, button {
   outline: none;
@@ -119,8 +179,7 @@ input, a, button {
     flex-direction: column; }
   .input-block.password {
     position: relative; }
-    .input-block.password:after {
-      content: '';
+    .input-block.password .open-password {
       position: absolute;
       background: url(../img/view.svg);
       background-repeat: no-repeat;
@@ -170,6 +229,10 @@ input[type=checkbox]:checked + label:before {
   .button-wrapper.flex-end {
     justify-content: flex-end;
     margin: 50px 50px 50px 0px; }
+  .button-wrapper.custom-sign-in {
+    position: absolute;
+    width: 100%;
+    bottom: 50px; }
 
 .helping-link {
   color: inherit; }
