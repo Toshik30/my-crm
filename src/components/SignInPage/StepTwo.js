@@ -1,6 +1,13 @@
 import {Link} from 'react-router-dom';
 
 const  stepTwo = () => {
+  // const completeFillIn = document.querySelectorAll('.state-round.active')
+  // const inputChecked = document.querySelectorAll('.check-box-custom');
+  // completeFillIn.forEach((elem) => {
+  //   inputChecked.forEach(item => item.checked ? completeFillIn.classList.add('complete-icon') : completeFillIn.classList.remove('complete-icon'));
+  //   if()
+  // })
+  // // inputChecked.forEach(item => item.checked ? completeFillIn.classList.add('complete-icon') : completeFillIn.classList.remove('complete-icon'));
     return (
       <section className="sign-page">
       <div className="container">
@@ -10,8 +17,8 @@ const  stepTwo = () => {
               <div className="get-started_ctn">
                 <h2 className="big-tittle text-white">Get started</h2>
                 <div className="checkout-validation">
-                    <div className="checkout-validation_item">
-                      <span className="state-round"></span>
+                    <div className="checkout-validation_item active">
+                      <span className="state-round active complete-icon"></span>
                       <span className="description-step">Valid your phone</span>
                     </div>
                     <span className="connect-state-line"></span>

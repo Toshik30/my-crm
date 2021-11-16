@@ -366,6 +366,8 @@ input[type=checkbox]:checked + label:before {
     margin-right: 12px; }
     .get-started .state-round.active {
       background: rgba(255, 255, 255, 0.303649); }
+    .get-started .state-round.complete-icon {
+      background: #FFFFFF url(../img/done-blue.svg) center no-repeat; }
 
 .step-wrapper {
   padding: 70px 0px;
@@ -437,3 +439,6 @@ label[for="yesAnswer"] {
     text-align: center;
     margin: 5px 0px;
     position: relative; }
+
+.box-shadow-valid {
+  box-shadow: 0px 0px 13px 0px #6db8ebc2; }

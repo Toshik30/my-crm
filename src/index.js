@@ -1,17 +1,13 @@
-import { render } from "react-dom";
+import React, { render } from "react-dom";
 import App from "./App";
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter, Routes,Route } from "react-router-dom";
 import StepOne from '../src/components/SignInPage/StepOne';
 import StepTwo from '../src/components/SignInPage/StepTwo';
 import StepThree from '../src/components/SignInPage/StepThree';
 import StepFour from '../src/components/SignInPage/StepFour';
 
-
 const rootElement = document.getElementById("root");
+
 render(
   <BrowserRouter>
     <Routes>

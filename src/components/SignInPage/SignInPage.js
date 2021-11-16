@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { createBrowserHistory } from 'history';
 import logo from '../../assets/img/logo.svg';
 
+
 const SignInPage = () => {
-   
-   
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailDirty, setEmailDirty ] = useState(false);
@@ -14,12 +14,6 @@ const SignInPage = () => {
     const [formValid, setFormValid] = useState(false);
     const [showPassword, setShowPassword] = useState(false)
 
-    const openPassword = () => {
-        const btnShowPass = document.querySelector('.open-password');
-        btnShowPass.addEventListener('mousedown', () => {
-            setShowPassword(false)
-        })
-    }
     useEffect(() => {
         if(emailError || passwordError) {
             setFormValid(false)
@@ -97,7 +91,6 @@ const SignInPage = () => {
                                         <input type="checkbox" id="check" className="checkbox" />
                                         <label htmlFor="check"></label>
                                         Remember me
-                                       
                                     </label>
                                     <a className="grey-context">Forgot Password?</a>
                                 </div>
