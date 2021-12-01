@@ -76,7 +76,7 @@ const  StepFour = () => {
             </div>
             <div className="button-wrapper custom-sign-in ">
                 <div className="button-block_sign-in flex-between">
-                  <Link to="/stepThree"><button className="btn_previous">Previos</button></Link>
+                  <Link to="/StepThree"><button className="btn_previous">Previos</button></Link>
                   <Link to="/Start"><button  className="btn primary">Start</button></Link>
                 </div>
             </div>

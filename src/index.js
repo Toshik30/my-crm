@@ -17,10 +17,7 @@ render(
       <Route path="/StepTwo" element={<StepTwo/>} />
       <Route path="/StepThree" element={<StepThree/>}/>
       <Route path="/StepFour" element={<StepFour/>}/>
-      
-    </Routes>
-    <Routes>
-      <Route path="/Start"  element={<Start/>}/>
+      <Route path="/Start" element={<Start/>}/>
     </Routes>
   </BrowserRouter>,
   rootElement

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center; }
 
-.dashboard_link {
+.dashboard li {
   display: flex;
   align-items: center; }
 
@@ -447,16 +447,21 @@ label[for="yesAnswer"] {
 .box-shadow-valid {
   box-shadow: 0px 0px 13px 0px #6db8ebc2; }
 
+.start {
+  display: flex; }
+
 .dashboard {
   padding: 30px 0px 30px 30px;
   background: #090E29;
   max-width: 250px;
-  min-height: 100vh; }
+  min-height: 100vh;
+  position: absolute;
+  width: 100%; }
   .dashboard-nav {
     margin-top: 72px; }
     .dashboard-nav ul {
       position: relative; }
-  .dashboard_link {
+  .dashboard li {
     color: #FFFFFF;
     list-style-type: none;
     font-size: 16px;
@@ -466,27 +471,27 @@ label[for="yesAnswer"] {
     font-family: "Montserrat-Medium", sans-serif;
     opacity: .7;
     transition: .4s; }
-    .dashboard_link .icon {
+    .dashboard li .icon {
       display: inline-block;
       width: 24px;
       height: 24px;
       background-repeat: no-repeat;
       margin-right: 13px; }
-    .dashboard_link:nth-child(1) .icon {
+    .dashboard li:nth-child(1) .icon {
       background: url(../img/icn/dashboard.svg) center no-repeat; }
-    .dashboard_link:nth-child(2) .icon {
+    .dashboard li:nth-child(2) .icon {
       background: url(../img/icn/projects.svg) center no-repeat; }
-    .dashboard_link:nth-child(3) .icon {
+    .dashboard li:nth-child(3) .icon {
       background: url(../img/icn/calendar/color.svg) center no-repeat; }
-    .dashboard_link:nth-child(4) .icon {
+    .dashboard li:nth-child(4) .icon {
       background: url(../img/icn/vacations.svg) center no-repeat; }
-    .dashboard_link:nth-child(5) .icon {
+    .dashboard li:nth-child(5) .icon {
       background: url(../img/icn/employees.svg) center no-repeat; }
-    .dashboard_link:nth-child(6) .icon {
+    .dashboard li:nth-child(6) .icon {
       background: url(../img/icn/Shape.svg) center no-repeat; }
-    .dashboard_link:nth-child(7) .icon {
+    .dashboard li:nth-child(7) .icon {
       background: url(../img/icn/infoportal.svg) center no-repeat; }
-    .dashboard_link.active {
+    .dashboard li.active {
       opacity: 1;
       transition: .4s; }
   .dashboard .active-link {
@@ -496,4 +501,7 @@ label[for="yesAnswer"] {
     position: absolute;
     right: 0;
     transition: .4s;
-    top: 15px; }
+    top: -10%; }
+
+.selected {
+  color: red; }

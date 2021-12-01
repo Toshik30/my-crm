@@ -1,8 +1,13 @@
-import  Dashboard  from "../components/SignInPage/Dashboard";
+import  Dashboard  from "../components/header/Dashboard";
 
-const Start = () => {
+const Start = (props) => {
     return(
-        <Dashboard/> 
+      <div className="start">
+           <Dashboard/>
+           <div className="container">
+           <h1>Hello {props.count}</h1>
+           </div>
+      </div>
     );
 }
 export default Start;
