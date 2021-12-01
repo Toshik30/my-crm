@@ -1,6 +1,22 @@
+import { useState } from 'react';
 import {Link} from 'react-router-dom';
 
-const  stepThree = () => {
+const  StepThree = () => {
+  const [email, setEmail] = useState('');
+  const inputEmail = document.querySelector('.input');
+  const threeStep = document.querySelector('.state-round.active');
+
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+    const re = /^((([a-zA-Z\-0-9]+\.)))$/;
+    if(!re.test(String(e.target.value).toLowerCase())) {
+        console.log(inputEmail)
+          if(inputEmail) {
+            threeStep.classList.add('complete-icon');
+            inputEmail.classList.add('box-shadow-valid');
+        }
+      }
+    }
     return (
       <section className="sign-page">
       <div className="container">
@@ -10,13 +26,13 @@ const  stepThree = () => {
               <div className="get-started_ctn">
                 <h2 className="big-tittle text-white">Get started</h2>
                 <div className="checkout-validation">
-                    <div className="checkout-validation_item">
-                      <span className="state-round"></span>
+                    <div className="checkout-validation_item active">
+                      <span className="state-round complete-icon"></span>
                       <span className="description-step">Valid your phone</span>
                     </div>
                     <span className="connect-state-line"></span>
-                    <div className="checkout-validation_item  ">
-                      <span className="state-round "></span>
+                    <div className="checkout-validation_item active ">
+                      <span className="state-round complete-icon"></span>
                       <span className="description-step">Tell about yourself</span>
                     </div>
                     <span className="connect-state-line"></span>
@@ -41,7 +57,7 @@ const  stepThree = () => {
                 <h3 className="sub-heading text-center">Tell about your company</h3>
                   <div className="input-block">
                     <label htmlFor="" className="label">Your Company`s Name</label>
-                    <input type="text" name="text" className="input" placeholder="Company`s Name" />
+                    <input type="text" onChange={e => emailHandler(e)} value={email} name="text" className="input"  placeholder="Company`s Name" />
                   </div>
                   <div className="input-block">          
                     <label htmlFor="" className="label">Business Direction</label>    
@@ -102,4 +118,4 @@ const  stepThree = () => {
     </section>
     );
 }
-export default stepThree
+export default StepThree

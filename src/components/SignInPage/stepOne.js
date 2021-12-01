@@ -82,7 +82,7 @@ const StepOne = (props) => {
                           <option value="+8">+8</option>
                         </select>
                         {/* <input type="phone"  name="phone" className="input" /> */}
-                        <InputMask  mask='(099)-99-99-999'className="input"value={props.value} onChange={handleInput}/>
+                        <InputMask  mask='(099)-99-99-999'className="input" value={props.value} onChange={handleInput}/>
                        
                         
                       </div>

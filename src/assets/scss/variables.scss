@@ -52,7 +52,10 @@ $lh-secondary: 19.5px;
     justify-content: space-between;
     align-items: center;
 }
-
+%align-center {
+    display: flex;
+    align-items: center;
+}
 * {
     margin: 0;
     padding: 0;
