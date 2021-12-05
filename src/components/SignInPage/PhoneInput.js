@@ -1,18 +1,24 @@
-// import InputMask from 'react-input-mask';
-// import React, { useState } from 'react';
+import { useState } from 'react';
 
-// function PhoneInput(props) {
-//   const [phone, setPhone] = useState('');
-//   const handleInput = ({target: {value}}) => setPhone(value);
-//   console.log(phone)
-  
-//     return (
-//       <InputMask 
-//         mask='(099)-99-99-999'
-//         className="input"
-//         value={props.value}
-//         onChange={handleInput}>
-//       </InputMask>
-//     );
-//   }
-//   export default PhoneInput
+const Component = () => {
+	const [value, setValue] = useState(0);
+
+	return (
+    <div>
+	    <First setValue2={setValue}/>
+	    <Second value={value}/>
+    </div>
+  );
+};
+
+const First = (props) => {
+	return <div>
+		<button onClick={() => props.setValue2((prevValue) => prevValue + 1)}>Click</button>
+	</div>
+}
+
+const Second = (props) => {
+	return <div>{props.value}</div>
+}
+
+export default Component;
