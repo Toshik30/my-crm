@@ -74,7 +74,7 @@ const SignInPage = () => {
                         </div>
                         <div className="sign-form-wrapper">
                             <h3 className="sub-heading text-center">Sign in to</h3>
-                            <form action="" className="sign-in-form">
+                            <form className="sign-in-form">
                                 <div className="input-block">
                                     {(emailDirty && emailError) && <div className="error_message"> {emailError}</div>}
                                     <label htmlFor="" className="label">Email Address</label>

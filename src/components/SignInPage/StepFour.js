@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
+import LeftPanel from '../elements/LeftPanel';
+
 let count = 1;
 const randomId = ()  => {
   return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
@@ -7,19 +9,19 @@ const randomId = ()  => {
 
 const  StepFour = () => {
   const [email, setEmail] = useState('');
-  const inputsEmail = document.querySelectorAll('.input');
-  const fourStep = document.querySelector('.state-round.active')
+  // const inputsEmail = document.querySelectorAll('.input');
+  // const fourStep = document.querySelector('.state-round.active')
   const emailHandler = (e) => {
     setEmail(e.target.value);
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(!re.test(String(e.target.value).toLowerCase())) {
-        inputsEmail.forEach(item => {
-          item.classList.add('box-shadow-valid');
-          if(item.classList.contains('box-shadow-valid')) {
-            fourStep.classList.add('complete-icon');
-          }
-        }); 
-      }
+    // if(!re.test(String(e.target.value).toLowerCase())) {
+    //     inputsEmail.forEach(item => {
+    //       item.classList.add('box-shadow-valid');
+    //       if(item.classList.contains('box-shadow-valid')) {
+    //         fourStep.classList.add('complete-icon');
+    //       }
+    //     }); 
+    //   }
     }
    
     const [members, setMembers]  = useState([{id:count, key:randomId()}]);
@@ -31,32 +33,7 @@ const  StepFour = () => {
       <div className="container">
         <div className="sign_ctn">
           <div className="container__sml" >
-            <div className="get-started">
-              <div className="get-started_ctn">
-                <h2 className="big-tittle text-white">Get started</h2>
-                <div className="checkout-validation">
-                    <div className="checkout-validation_item active">
-                      <span className="state-round complete-icon"></span>
-                      <span className="description-step">Valid your phone</span>
-                    </div>
-                    <span className="connect-state-line"></span>
-                    <div className="checkout-validation_item active ">
-                      <span className="state-round complete-icon"></span>
-                      <span className="description-step">Tell about yourself</span>
-                    </div>
-                    <span className="connect-state-line"></span>
-                    <div className="checkout-validation_item active">
-                      <span className="state-round complete-icon"></span>
-                      <span className="description-step">Tell about your company</span>
-                    </div>
-                    <span className="connect-state-line"></span>
-                    <div className="checkout-validation_item active">
-                      <span className="state-round active"></span>
-                      <span className="description-step">Invite Team Members</span>
-                    </div>
-                </div>
-              </div>
-            </div>
+            <LeftPanel/>
           </div>
           <div className="container__lg relative">
             <div className="step-wrapper">

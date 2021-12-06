@@ -1,41 +1,13 @@
 import {Link} from 'react-router-dom';
-import React, { useEffect } from 'react';
+import LeftPaneL from '../elements/LeftPanel';
 const  StepTwo = () => {
-  const completeFillIn = document.querySelectorAll('.state-round.active')
-  const inputChecked = document.querySelectorAll('.check-box-custom');
- 
-  
+
     return (
       <section className="sign-page">
       <div className="container">
         <div className="sign_ctn">
           <div className="container__sml" >
-            <div className="get-started">
-              <div className="get-started_ctn">
-                <h2 className="big-tittle text-white">Get started</h2>
-                <div className="checkout-validation">
-                    <div className="checkout-validation_item active" >
-                      <span className="state-round active complete-icon"></span>
-                      <span className="description-step">Valid your phone</span>
-                    </div>
-                    <span className="connect-state-line"></span>
-                    <div className="checkout-validation_item  active">
-                      <span className="state-round active complete-icon"></span>
-                      <span className="description-step">Tell about yourself</span>
-                    </div>
-                    <span className="connect-state-line"></span>
-                    <div className="checkout-validation_item">
-                      <span className="state-round"></span>
-                      <span className="description-step">Tell about your company</span>
-                    </div>
-                    <span className="connect-state-line"></span>
-                    <div className="checkout-validation_item">
-                      <span className="state-round"></span>
-                      <span className="description-step">Invite Team Members</span>
-                    </div>
-                </div>
-              </div>
-            </div>
+            <LeftPaneL/>
           </div>
           <div className="container__lg relative">
             <div className="step-wrapper">
