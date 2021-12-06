@@ -1,6 +1,6 @@
 import {STEPS} from '../SignInPage/constants';
-import classNames from 'classnames';
-const LeftPanel = (props) => {
+
+const LeftPanel = () => {
 return(
     <div className="get-started">
         <div className="get-started_ctn">
